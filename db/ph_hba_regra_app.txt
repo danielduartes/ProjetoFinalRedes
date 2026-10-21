@@ -1,0 +1,1 @@
+host    app_db    app_user    10.0.1.0/24    scram-sha-256
