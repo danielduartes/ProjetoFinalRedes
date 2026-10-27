@@ -1,0 +1,6 @@
+auto lo
+iface lo inet loopback
+auto enp0s3
+iface enp0s3 inet static
+address 10.0.1.10/24
+gateway 10.0.1.1
