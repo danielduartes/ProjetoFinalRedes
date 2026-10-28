@@ -1,0 +1,11 @@
+[Unit]
+Description=API do projeto
+After=network.target
+
+[Service]
+ExecStart=/opt/app/bin/uvicorn main:app --app-dir /opt/app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
