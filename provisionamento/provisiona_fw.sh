@@ -25,3 +25,11 @@ systemctl enable nftables dnsmasq unbound
 sysctl --system
 systemctl restart networking
 systemctl restart nftables dnsmasq unbound
+
+cat > /etc/ssh/sshd_config.d/10-so-chave.conf << 'EOF'
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PermitRootLogin no
+EOF
+sshd -t
+systemctl reload ssh
