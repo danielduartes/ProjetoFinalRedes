@@ -9,7 +9,7 @@ def conectar():
         host=os.getenv("DB_HOST", "10.0.3.10"),
         dbname="app_db",
         user="app_user",
-        password=os.getenv("DB_PASSWORD", "123"),
+        password=os.environ["DB_PASSWORD"],
         connect_timeout=5,
     )
 
