@@ -32,7 +32,7 @@ systemctl daemon-reload
 mount -o remount /
 [ -f /aquota.user ] || quotacheck -cugm /
 quotaon -v / || true
-setquota -u ana 5000 6000 0 0 /
+setquota -g devs 20000 25000 0 0 /
 
 cp $DIR/arquivos/rotacao_backups /etc/cron.d/rotacao_backups
 systemctl enable --now cron
